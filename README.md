@@ -15,17 +15,9 @@ flutzig provides a JavaScript `route()` function that works like Laravel's, maki
   - [`route()` function](#route-function)
   - [`Router` class](#router-class)
   - [Route-model binding](#route-model-binding)
-  - [TypeScript](#typescript)
-- [**JavaScript frameworks**](#javascript-frameworks)
-  - [Generating and importing flutzig's configuration](#generating-and-importing-flutzigs-configuration)
-  - [Importing the `route()` function](#importing-the-route-function)
-  - [Vue](#vue)
-  - [React](#react)
-  - [SPAs or separate repos](#spas-or-separate-repos)
 - [**Filtering Routes**](#filtering-routes)
   - [Including/excluding routes](#includingexcluding-routes)
   - [Filtering with groups](#filtering-with-groups)
-- [**Other**](#other)
 - [**Contributing**](#contributing)
 
 ## Installation
