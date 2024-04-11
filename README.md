@@ -5,8 +5,6 @@
 [![GitHub Actions Status](https://img.shields.io/github/actions/workflow/status/uiibevy/flutzig/test.yml?branch=main&style=flat)](https://github.com/uiibevy/flutzig/actions?query=workflow:Tests+branch:main)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/uiibevyco/flutzig.svg?style=flat)](https://packagist.org/packages/uiibevyco/flutzig)
 [![Downloads on Packagist](https://img.shields.io/packagist/dt/uiibevyco/flutzig.svg?style=flat)](https://packagist.org/packages/uiibevyco/flutzig)
-[![Latest Version on NPM](https://img.shields.io/npm/v/flutzig-js.svg?style=flat)](https://npmjs.com/package/flutzig-js)
-[![Downloads on NPM](https://img.shields.io/npm/dt/flutzig-js.svg?style=flat)](https://npmjs.com/package/flutzig-js)
 
 flutzig provides a JavaScript `route()` function that works like Laravel's, making it a breeze to use your named Laravel routes in JavaScript.
 
