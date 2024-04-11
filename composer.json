@@ -1,0 +1,27 @@
+{
+    "name": "uiibevy/flutzig",
+    "description": "Use your laravel named routes in Flutter.",
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "laravel/framework": ">=9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0 || ^8.0 || ^9.0",
+        "pestphp/pest": "¨^2.34"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Uiibevy\\Flutzig\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hicham SADDEK",
+            "email": "hichamsaddek.stcnet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
