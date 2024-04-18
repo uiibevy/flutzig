@@ -20,17 +20,12 @@ class CommandRouteGenerator extends Command
         $this->files = $files;
     }
 
-    /**
-     * @throws \ReflectionException
-     */
     public function handle(): void
     {
-        $flutzig = new Flutzig(
-            $this->option('group'),
-            $this->option('url')
-                ? url($this->option('url'))
-                : null
-        );
+        $group = $this->option('group');
+        $url = $this->hasOption('url') ? $this->option('url') : null;
+
+        $flutzig = Flutzig::from($group, $url);
 
         $path = $this->argument('path') ?? config(
             'flutzig.output.path',
@@ -47,14 +42,22 @@ class CommandRouteGenerator extends Command
 
         $output = config('flutzig.output.file', File::class);
 
-        $this->files->put(base_path("{$name}.json"), new $output($flutzig));
+        $this->files->put(base_path("$name.json"), new $output($flutzig));
 
         $this->info('Files generated!');
     }
 
-    private function makeDirectory($path): void
+    /**
+     * Creates a directory at the given path if it doesn't already exist.
+     *
+     * @param  string  $path  The path of the directory to create.
+     * @return void
+     */
+    private function makeDirectory(string $path): void
     {
-        if ($this->files->isDirectory(dirname(base_path($path)))) return;
+        if ($this->files->isDirectory(dirname(base_path($path)))) {
+            return;
+        }
 
         $this->files->makeDirectory(
             dirname(base_path($path)),
